@@ -1,4 +1,4 @@
-from codigo.sistema_pagamento import *
+from codigo.sistema_pagamento02 import *
 
 def test_deve_calcular_salario_funcionario_comum():
     funcionario = FuncionarioComum()

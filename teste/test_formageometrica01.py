@@ -1,4 +1,4 @@
-from codigo.formageometrica import *
+from codigo.formageometrica01 import *
 
 def test_retornar_raio_circulo():
     circulo = Circulo()

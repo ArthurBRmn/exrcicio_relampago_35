@@ -1,4 +1,4 @@
-from codigo.sistema_pedido import *
+from codigo.sistema_pedido03 import *
 
 def teste_disconto_eletronico ():
     produto_eletronico = ProdutoEletronico()

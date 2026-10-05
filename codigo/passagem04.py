@@ -29,23 +29,43 @@ class Voo:
     def set_data(self, data):
         self.__data = data
 
-    def CalcularPreco(self):
+    def calcularPreco(self):
         pass
 
 class VooDomestico(Voo):
     def __init__(self):
+        super().__init__()
         self.__fatorPreco = 0
 
+    def Get_fatorPreco(self):
+        return self.__fatorPreco
+
+    def set_fatorPreco(self, fatorPreco):
+        self.__fatorPreco = fatorPreco
+
     def calcularPreco(self):
-        return self.__distancia * self.__fatorPreco
+        return self.get_distancia() * self.__fatorPreco
 
 class VooInternacional(Voo):
 
     def __init__(self):
         super().__init__()
-        self.__fatorPeco = 0
+        self.__fatorPreco = 0
         self.__taxa_conversao = 0
 
-    def calcularPreco(self)
+    def Get_fatorPreco(self):
+        return self.__fatorPreco
+
+    def set_fatorPreco(self, fatorPreco):
+        self.__fatorPreco = fatorPreco
+
+    def get_taxa_conversao(self):
+        return self.__taxa_conversao
+
+    def set_taxa_conversao(self, taxa_conversao):
+        self.__taxa_conversao = taxa_conversao
+
+    def calcularPreco(self):
+        return self.get_distancia() * self.__fatorPreco * self.__taxa_conversao
 
 
