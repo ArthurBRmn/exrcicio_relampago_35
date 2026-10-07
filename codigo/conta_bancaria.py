@@ -1,6 +1,6 @@
 class ContaBancaria:
 
-    def __init(self):
+    def __init__(self):
         self.__numero_conta = 0
         self.__saldo = 0.0
         self.__titular = ""
@@ -48,4 +48,18 @@ class ContaCorrente(ContaBancaria):
 class ContaPoupanca(ContaCorrente):
 
     def __init__(self):
-        ContaCorrente.__init__(self)
+        ContaBancaria.__init__(self)
+        self.__taxa_juros = 0.0
+
+    def get_taxa_juros(self):
+        return self.__taxa_juros
+
+    def set_taxa_juros(self, taxa_juros):
+        self.__taxa_juros = taxa_juros
+
+    def depositar(self, valor):
+        self.set_saldo(self.get_saldo() + valor - self.__taxa_manutencao)
+
+    def calcular_juros(self):
+        self.set_saldo(self.get_saldo() + (self.get_taxa_juros() * self.get_saldo() / 100))
+
