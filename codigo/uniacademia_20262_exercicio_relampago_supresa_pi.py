@@ -161,3 +161,5 @@ class Escola:
         self.__curso = curso
     def get_curso(self):
         return self.__curso
+
+

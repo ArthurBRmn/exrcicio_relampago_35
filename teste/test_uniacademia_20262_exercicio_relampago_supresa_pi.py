@@ -118,4 +118,6 @@ def test_j_coordenador_de_um_professor():
     curso = Curso()
     curso.set_coordenador(coordenador)
     coordenador.set_curso_coordenacao(curso)
-    assert coordenador.get_curso_coordenacao().get_coordenador() is coordenador
+    assert coordenador.get_curso_coordenacao().get_coordenador() is
+
+
